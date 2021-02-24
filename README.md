@@ -1,2 +1,2 @@
-# learnAI-ML
-My journey of learning AI/ML
+# learnDataScience
+The path to Data Science
