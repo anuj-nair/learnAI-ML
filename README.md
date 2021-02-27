@@ -5,7 +5,6 @@ The path to Data Science
 
 ```
 Accuracy = no. predicted correctly / total no. of observation
-
 ```
 ```
 Precision= no. predicted as spam that are actually spam / total no. of prediction as spam
