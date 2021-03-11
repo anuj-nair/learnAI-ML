@@ -35,10 +35,14 @@ The path to Data Science
 ```
 Accuracy = total no. of correct predictions / total no. of observation
 ```
+
+#### How many selected items are relevant?
 ```
 Precision = total no. of correct predictions / total no. of prediction
 ```
 For False positive optimize model on Precision
+
+#### How many relevant items are selected?
 ```
 Recall = total no. of correct predictions / total of observation that were supposed to be predicted
 ```
