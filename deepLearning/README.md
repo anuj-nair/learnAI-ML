@@ -87,9 +87,9 @@ P: Amount of padding
 * When downsampling, it makes sense to preserve the parts that were most activated
 
 ### Image Augmentation
-* Taking images in training data set and manipulating them, which means
-			There are more images for our model to train on
-			Image manipulations make our model more robust
+* Taking images in training data set and manipulating them, which means		
+		*	There are more images for our model to train on
+		*	Image manipulations make our model more robust
 
 
 
