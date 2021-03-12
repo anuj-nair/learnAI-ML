@@ -88,8 +88,8 @@ P: Amount of padding
 
 ### Image Augmentation
 * Taking images in training data set and manipulating them, which means		
-		*	There are more images for our model to train on
-		*	Image manipulations make our model more robust
+	*	There are more images for our model to train on
+	*	Image manipulations make our model more robust
 
 
 
