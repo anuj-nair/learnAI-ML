@@ -299,7 +299,10 @@ ds = tf.data.TextLineDataset(["file1","file2"],"GZIP")
 * `map(func)` - Processes each element of input dataset and returns the values as an element in the output dataset
 
 	`ds1 = tf.data.Dataset.range(6)` - Returns [0,1,2,3,4,5]
+
 	`ds2 = ds1.filter(lambda x: x > 2)` - Returns [3,4,5]
+	
 	`def map_func(x):return x*x`
+	
 	`ds3 = ds1.map(map_func)` - Returns [0,1,4,9,16,25]
 
