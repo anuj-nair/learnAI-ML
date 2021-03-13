@@ -121,15 +121,15 @@ or
 	`tf.matrix_solve(t1,t2)` - Returns x such that t1.x = t2
 
 #### Reduction Operations
-`tf.reduce_sum(t1)` - Returns the sum of the elements
-`tf.reduce_mean(t1)` - Returns the average of the elements
-`tf.reduce_prod(t1)` - Returns the product of the elements
-`tf.reduce_max(t1)/tf.reduce_min(t1)` - Returns the maximum/minimum of the elements
+* `tf.reduce_sum(t1)` - Returns the sum of the elements
+* `tf.reduce_mean(t1)` - Returns the average of the elements
+* `tf.reduce_prod(t1)` - Returns the product of the elements
+* `tf.reduce_max(t1)/tf.reduce_min(t1)` - Returns the maximum/minimum of the elements
 
 #### Graphs
-`tf.get_default_graph()` - Returns current graph
-`graph = tf.Graph()` - Create new graph
-`graph.as_default()` - Changes the current graph
+* `tf.get_default_graph()` - Returns current graph
+* `graph = tf.Graph()` - Create new graph
+* `graph.as_default()` - Changes the current graph
 
 * Access graph elements:
 	```
@@ -272,20 +272,27 @@ ds = tf.data.TextLineDataset(["file1","file2"],"GZIP")
 * `skip(count)` - Returns a dataset with all but the first count elements
 * `repeat(count=None)` - Repeats the dataset's element the given number of times
 
-	`ds1 = tf.data.Dataset.range(5)` - Returns [0,1,2,3,4]
-	`ds2 = ds1.take(2)` - Returns [0,1]
-	`ds3 = ds1.skip(2)` - Returns [2,3,4]
-	`ds4 = ds1.repeat()` - Returns [0,1,2,3,4,0,1,2,3,4]
+`ds1 = tf.data.Dataset.range(5)` - Returns [0,1,2,3,4]
+
+`ds2 = ds1.take(2)` - Returns [0,1]
+
+`ds3 = ds1.skip(2)` - Returns [2,3,4]
+
+`ds4 = ds1.repeat()` - Returns [0,1,2,3,4,0,1,2,3,4]
 
 * `concatenate(dataset)` - Returns a concatenation of the dataset with given dataset
 * `batch(batch_size)` - Splits a dataset into elements of the given size
 * `shuffle(buffer_size,seed=None)` - Shuffles the given number of values and returns them in the dataset
 		
-	`ds1 = tf.data.Dataset.range(3)` - Returns [0,1,2]
-	`ds2 = tf.data.Dataset.range(3,6)` - Returns [3,4,5]
-	`ds3 = ds1.concatenate(ds2)` - Returns [0,1,2,3,4,5]
-	`ds4 = ds3.batch(3)` - Returns [[0,1,2],[3,4,5]]
-	`ds5 = ds3.shuffle(6)` - Returns [2,3,4,1,0,5]
+`ds1 = tf.data.Dataset.range(3)` - Returns [0,1,2]
+
+`ds2 = tf.data.Dataset.range(3,6)` - Returns [3,4,5]
+
+`ds3 = ds1.concatenate(ds2)` - Returns [0,1,2,3,4,5]
+
+`ds4 = ds3.batch(3)` - Returns [[0,1,2],[3,4,5]]
+
+`ds5 = ds3.shuffle(6)` - Returns [2,3,4,1,0,5]
 	
 #### Transformations
 * `filter(func)` - Function returns a bool that identifies if the element should be removed
