@@ -3,17 +3,17 @@
 ## Installation
 
 * For GPU Based
-```
-pip install tensorflow-gpu==1.14.0
-```
+	```
+	pip install tensorflow-gpu==1.14.0
+	```
 * For CPU Based
-```
-pip install tensorflow-cpu==1.14.0
-```
+	```
+	pip install tensorflow-cpu==1.14.0
+	```
 or
-```
-pip install tensorflow==1.14.0
-```
+	```
+	pip install tensorflow==1.14.0
+	```
 	
 ## Important Modules
 * tensor flow - Primary container, accessed as `tf`
@@ -59,53 +59,53 @@ pip install tensorflow==1.14.0
 #### Shape and Reshape
 
 * `tf.shape` provides a tensor's shape
-		```
-		t1 = tf.constant([[1,2,4],[4,5,6]])
-		tf.shape(t1)
-		```
-		Returns [2,3]
+	```
+	t1 = tf.constant([[1,2,4],[4,5,6]])
+	tf.shape(t1)
+	```
+	Returns [2,3]
 
 * `tf.reshape` updates a tensor's shape
-		```
-		t2 = tf.reshape(t1,[6])
-		tf.shape(t2)
-		```
-   	Returns [6]
+	```
+	t2 = tf.reshape(t1,[6])
+	tf.shape(t2)
+	```
+	Returns [6]
 
 #### Exacting Data from a Tensor
 * `tf.slice(tensor,begin,size)`
 	* extracts a subtensor or slice
 	* begin - first index to extract
 	* size - size of subtensor to extract
-			```
-			t1 = tf.constant([[1,2,4],[4,5,6],[7,8,9]])
-			t2 = tf.slice(t1,[1,1],[2,2])
-			```
- 			Returns [[5,6],[8,9]]
+	```
+	t1 = tf.constant([[1,2,4],[4,5,6],[7,8,9]])
+	t2 = tf.slice(t1,[1,1],[2,2])
+	```
+	Returns [[5,6],[8,9]]
 
 #### Math/Rounding Operations
 * Arithmetic operations: two forms
-		```
-		tf.add(t1,t2) is equivalent to t1 + t2
-		```
+	```
+	tf.add(t1,t2) is equivalent to t1 + t2
+	```
 * Exponential/Logarithmic functions
-		```
-		tf.exp(t1)
-		tf.log(t1)
-		tf.erfc(t1) # Complimentary Error Function
-		```
+	```
+	tf.exp(t1)
+	tf.log(t1)
+	tf.erfc(t1) # Complimentary Error Function
+	```
 * Rounding Functions
-		```
-		tf.round(t1)
-		tf.ceil(t1)
-		tf.floor(t1)
-		```
+	```
+	tf.round(t1)
+	tf.ceil(t1)
+	tf.floor(t1)
+	```
 #### Comparison
 * Maximum and Minimum of a Tensor
-		```
-		tf.maximum(t1,t2)
-		tf.minimum(t1,t2)
-		```
+	```
+	tf.maximum(t1,t2)
+	tf.minimum(t1,t2)
+	```
 * Index of Maximum and Minimum of a Tensor
 	`tf.argmax([0,-2,4,1])` - Returns 1
 	`tf.argmin([0,-2,4,1])` - Returns 2
@@ -132,10 +132,10 @@ pip install tensorflow==1.14.0
 `graph.as_default()` - Changes the current graph
 
 * Access graph elements:
-		```
-		graph.get_tensor_by_name(tensor_name)
-		graph.get_operation_by_name(op_name)
-		```
+	```
+	graph.get_tensor_by_name(tensor_name)
+	graph.get_operation_by_name(op_name)
+	```
 #### Sessions
 * Create a session: `tf.Session()`
 	* `tf.Session()` - makes session active
@@ -155,19 +155,19 @@ Displays NumPy array
 ### Training
 #### Variables
 * Creating variables: 
-		```
-		tf.Variable()
-		```
+	```
+	tf.Variable()
+	```
 * Variables Needs to be Initialized
-		```
-		init_op1 = tf.variable_initializer([v1,v2])
-		init_op2 = tf.local_variable_initializer()
-		init_op3 = tf.global_variable_initializer()
-		```
+	```
+	init_op1 = tf.variable_initializer([v1,v2])
+	init_op2 = tf.local_variable_initializer()
+	init_op3 = tf.global_variable_initializer()
+	```
 * Running 
-		```
-		sess.run(init_op3)
-		```
+	```
+	sess.run(init_op3)
+	```
 #### Logging
 * Five severity levels
 	* debug
@@ -176,22 +176,22 @@ Displays NumPy array
 	* error
 	* fatal
 * Enable logging
-		```
-		tf.logging.set_verbosity(tf.logging.INFO)
-		```
+	```
+	tf.logging.set_verbosity(tf.logging.INFO)
+	```
 * Print message to log
-		```
-		tf.logging.info('Output message')
-		```
+	```
+	tf.logging.info('Output message')
+	```
 #### Optimizer
 * Creating and Using an Optimizer
-		```
-		optimizer = tf.train.GradientDescentOptimizer(learn_rate)
-		op = optimizer.minimize(loss)
-		with tf.Session() as sess:
-				for step in range(num_steps):
-					loss = sess.run(op)
-		```
+	```
+	optimizer = tf.train.GradientDescentOptimizer(learn_rate)
+	op = optimizer.minimize(loss)
+	with tf.Session() as sess:
+			for step in range(num_steps):
+				loss = sess.run(op)
+	```
 * Optimizer Algorithm
 	* Momentum algorithm (MomentumOptimizer)
 		* Uses past values of the loss gradient
@@ -247,12 +247,12 @@ with tf.Session() as sess:
 	* `ds3 = tf.data.Dataset.range(2,8,2)` - Returns [2, 4, 6]
 ##### Multiple Tensors
 * `tf.data.Dataset.from_tensors` - Creates a dataset with a single element containing the tensors' element
-		```
-		t1 = tf.constant([1,2])
-		t2 = tf.constant([3,4])
-		ds = tf.data.Dataset.from_tensors([t1,t2])
-		```
-		Returns [[1,2],[3,4]]
+	```
+	t1 = tf.constant([1,2])
+	t2 = tf.constant([3,4])
+	ds = tf.data.Dataset.from_tensors([t1,t2])
+	```
+	Returns [[1,2],[3,4]]
 ##### Text Files
 * `tf.data.TextLineDataset`
 	* filenames - List of text files
@@ -272,25 +272,27 @@ ds = tf.data.TextLineDataset(["file1","file2"],"GZIP")
 * `skip(count)` - Returns a dataset with all but the first count elements
 * `repeat(count=None)` - Repeats the dataset's element the given number of times
 
-		`ds1 = tf.data.Dataset.range(5)` - Returns [0,1,2,3,4]
-		`ds2 = ds1.take(2)` - Returns [0,1]
-		`ds3 = ds1.skip(2)` - Returns [2,3,4]
-		`ds4 = ds1.repeat()` - Returns [0,1,2,3,4,0,1,2,3,4]
+	`ds1 = tf.data.Dataset.range(5)` - Returns [0,1,2,3,4]
+	`ds2 = ds1.take(2)` - Returns [0,1]
+	`ds3 = ds1.skip(2)` - Returns [2,3,4]
+	`ds4 = ds1.repeat()` - Returns [0,1,2,3,4,0,1,2,3,4]
 
 * `concatenate(dataset)` - Returns a concatenation of the dataset with given dataset
 * `batch(batch_size)` - Splits a dataset into elements of the given size
 * `shuffle(buffer_size,seed=None)` - Shuffles the given number of values and returns them in the dataset
-		`ds1 = tf.data.Dataset.range(3)` - Returns [0,1,2]
-		`ds2 = tf.data.Dataset.range(3,6)` - Returns [3,4,5]
-		`ds3 = ds1.concatenate(ds2)` - Returns [0,1,2,3,4,5]
-		`ds4 = ds3.batch(3)` - Returns [[0,1,2],[3,4,5]]
-		`ds5 = ds3.shuffle(6)` - Returns [2,3,4,1,0,5]
+		
+	`ds1 = tf.data.Dataset.range(3)` - Returns [0,1,2]
+	`ds2 = tf.data.Dataset.range(3,6)` - Returns [3,4,5]
+	`ds3 = ds1.concatenate(ds2)` - Returns [0,1,2,3,4,5]
+	`ds4 = ds3.batch(3)` - Returns [[0,1,2],[3,4,5]]
+	`ds5 = ds3.shuffle(6)` - Returns [2,3,4,1,0,5]
+	
 #### Transformations
 * `filter(func)` - Function returns a bool that identifies if the element should be removed
 * `map(func)` - Processes each element of input dataset and returns the values as an element in the output dataset
 
-		`ds1 = tf.data.Dataset.range(6)` - Returns [0,1,2,3,4,5]
-		`ds2 = ds1.filter(lambda x: x > 2)` - Returns [3,4,5]
-		`def map_func(x):return x*x`
-		`ds3 = ds1.map(map_func)` - Returns [0,1,4,9,16,25]
+	`ds1 = tf.data.Dataset.range(6)` - Returns [0,1,2,3,4,5]
+	`ds2 = ds1.filter(lambda x: x > 2)` - Returns [3,4,5]
+	`def map_func(x):return x*x`
+	`ds3 = ds1.map(map_func)` - Returns [0,1,4,9,16,25]
 
