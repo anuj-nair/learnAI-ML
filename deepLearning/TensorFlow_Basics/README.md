@@ -3,17 +3,17 @@
 ## Installation
 
 * For GPU Based
-		```
-		pip install tensorflow-gpu==1.14.0
-		```
+```
+pip install tensorflow-gpu==1.14.0
+```
 * For CPU Based
-		```
-		pip install tensorflow-cpu==1.14.0
-		```
-		or
-		```
-		pip install tensorflow==1.14.0
-		```
+```
+pip install tensorflow-cpu==1.14.0
+```
+or
+```
+pip install tensorflow==1.14.0
+```
 	
 ## Important Modules
 * tensor flow - Primary container, accessed as `tf`
@@ -38,21 +38,21 @@
 
 ### Creating Constant Tensor
 * Call `tf.constant` with a list of values
-		```
-		t1 = tf.constant([1.5,2.5,3.5])
-		t2 = tf.constant([['a','b','c','d'],['e','f','g','h']])
-		t3 = tf.constant([[True,False],[False,True]])
-		t4 = tf.constant([[1,3],[5,7]],dtype=tf.unit8)
-		``` 
+	```
+	t1 = tf.constant([1.5,2.5,3.5])
+	t2 = tf.constant([['a','b','c','d'],['e','f','g','h']])
+	t3 = tf.constant([[True,False],[False,True]])
+	t4 = tf.constant([[1,3],[5,7]],dtype=tf.unit8)
+	``` 
 * Normal Distribution
-		```
-		tf.random_normal(shape,mean=0.0,stddev=1.0) #
-		tf.truncated_normal(shape,mean=0.0,stddev=1.0) # Values stand between 2 standard deviation of the mean
-		``` 
+	```
+	tf.random_normal(shape,mean=0.0,stddev=1.0) #
+	tf.truncated_normal(shape,mean=0.0,stddev=1.0) # Values stand between 2 standard deviation of the mean
+	``` 
 * Uniform Distribution
-		```
-		tf.random_uniform(shape,minval=0,maxval=None)
-		``` 
+	```
+	tf.random_uniform(shape,minval=0,maxval=None)
+	``` 
 
 ### Tensor Operations
 
