@@ -35,23 +35,25 @@
 	* Signed integer - `tf.int8`/`tf.int32`/`tf.int64`
 	* Floating-point - `tf.float32`/`tf.float64`
 	* Strings - `tf.string`
+
 ### Creating Constant Tensor
-	* Call `tf.constant` with a list of values
-			```
-			t1 = tf.constant([1.5,2.5,3.5])
-			t2 = tf.constant([['a','b','c','d'],['e','f','g','h']])
-			t3 = tf.constant([[True,False],[False,True]])
-			t4 = tf.constant([[1,3],[5,7]],dtype=tf.unit8)
-			``` 
-	* Normal Distribution
-			```
-			tf.random_normal(shape,mean=0.0,stddev=1.0) #
-			tf.truncated_normal(shape,mean=0.0,stddev=1.0) # Values stand between 2 standard deviation of the mean
-			``` 
-	* Uniform Distribution
-			```
-			tf.random_uniform(shape,minval=0,maxval=None)
-			``` 
+* Call `tf.constant` with a list of values
+		```
+		t1 = tf.constant([1.5,2.5,3.5])
+		t2 = tf.constant([['a','b','c','d'],['e','f','g','h']])
+		t3 = tf.constant([[True,False],[False,True]])
+		t4 = tf.constant([[1,3],[5,7]],dtype=tf.unit8)
+		``` 
+* Normal Distribution
+		```
+		tf.random_normal(shape,mean=0.0,stddev=1.0) #
+		tf.truncated_normal(shape,mean=0.0,stddev=1.0) # Values stand between 2 standard deviation of the mean
+		``` 
+* Uniform Distribution
+		```
+		tf.random_uniform(shape,minval=0,maxval=None)
+		``` 
+
 ### Tensor Operations
 
 #### Shape and Reshape
@@ -148,7 +150,7 @@ with tf.Session() as sess:
 	result1,result2 = sess.run([t1,t2])
 	print(result1)
 ```
-> Displays NumPy array
+Displays NumPy array
 
 ### Training
 #### Variables
