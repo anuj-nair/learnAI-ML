@@ -212,5 +212,6 @@ Q(S<sub>t</sub>,A<sub>t</sub>) = Q(S<sub>t</sub>,A<sub>t</sub>) +	α(R<sub>t</su
 ### Multiple Agent Reinforcement Learning
 
 |Cooperative|Competitive|General|
+|---|---|---|
 |Working towards Common Goal|Working towards Different Goal|Learning in an open space without parters|
 
