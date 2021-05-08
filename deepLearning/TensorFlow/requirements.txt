@@ -1,7 +1,0 @@
-numpy
-pip>=9.0.0
-pandas
-scikit-learn
-scipy
-tensorflow-cpu==1.15.0
-#google-api-python-client
